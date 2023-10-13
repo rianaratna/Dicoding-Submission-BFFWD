@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.category-nav {
+    display: flex;
+    background-color: #FFCE56;
+    /* position: sticky; */
+    justify-content: space-between;
+    padding-inline: clamp(1.5rem, calc(10%/2), 8rem);
+    z-index: 999;
+    height: clamp(2rem, calc(4vw + 2rem), 6rem);
+}
+
+.arrow-button {
+    border: none;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 10%;
+    padding-block: clamp(.5rem, calc(1vw + .5rem), 2rem);
+    background: none;
+}
+
+.category-nav .arrow-button:first-child {
+    transform: rotate(180deg);
+}
+
+.primary-title {
+    font-size: clamp(2rem, calc(4vw + 1rem), 6rem);
+    line-height: 1.1;
+}
+
+p {
+    font-size: clamp(1rem, calc(6vw + 1rem), 2rem);
+}
+
+@media screen and (min-width: 56rem){
+    .jumbotron {
+        padding: 20em 0 15em 0;
+    }
+}
+
+
+app-bar {
+    background-color: rgba(0,0,0,.5);
+    transition: background-color 500ms linear;
+}
+
+app-bar.scroll {
+    background-color: rgba(0,0,0,1);
+}
